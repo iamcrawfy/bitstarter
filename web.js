@@ -1,10 +1,11 @@
 var express = require('express');
-//var readshit = require('fs');
+var fs = require('fs');
 
 var app = express.createServer(express.logger());
+text_input = fs.readFileSync('./index.html');
 
-app.get('/', function(request, response) {
-  response.send('Hello World poop2!');
+apxsp.get('/', function(request, response) {
+  response.send(text_input.toString());
 });
 
 var port = process.env.PORT || 5000;
