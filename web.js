@@ -2,9 +2,10 @@ var express = require('express');
 var fs = require('fs');
 
 var app = express.createServer(express.logger());
-text_input = fs.readFileSync('./index.html');
+text_input = fs.readFileSync('index.html');
+console.log(text_input.toString());
 
-apxsp.get('/', function(request, response) {
+app.get('/', function(request, response) {
   response.send(text_input.toString());
 });
 
